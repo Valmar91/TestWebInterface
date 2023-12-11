@@ -42,10 +42,9 @@ public class WebTest {
         driver.findElement(By.cssSelector("[data-test-id = 'phone'] input")).sendKeys("+11111111111");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
         driver.findElement(By.cssSelector("button.button")).click();
-        var actualTextElement = driver.findElement(By.cssSelector("[data-test-id=order-success"));
+        var actualTextElement = driver.findElement(By.cssSelector("[data-test-id=order-success]"));
         var actualText = actualTextElement.getText().trim();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
         assertTrue(actualTextElement.isDisplayed());
     }
-
 }
